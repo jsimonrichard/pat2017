@@ -1,0 +1,10 @@
+php_value display_errors on
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} pat2017.byethost4.com$
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /public/$1
+RewriteCond %{HTTP_HOST} pat2017.byethost4.com$
+RewriteRule ^(/)?$ public/index.php [L]
