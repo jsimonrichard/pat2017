@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'MainController@index');
+
+Route::get('/topics', 'TopicController@index');
+Route::get('/topics/{topic}', 'TopicController@show');
